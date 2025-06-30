@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+html {
+  line-height: 1.5;
+  height: 100%;
+
+  /* colors */
+  --white: hsl(0, 100%, 100%);
+  --purple-100: hsl(275, 100%, 97%);
+  --purple-600: hsl(292, 16%, 49%);
+  --purple-950: hsl(292, 42%, 14%);
+  --violet-600: hsl(281, 83%, 54%);
+}
+
+p {
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+  background: url("../assets/images/background-pattern-mobile.svg") no-repeat
+      top,
+    var(--purple-100);
+  padding: 130px 0;
+}
+
+main {
+  display: block;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: auto;
+  letter-spacing: 0;
+}
+
+.main-container {
+  max-width: 327px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: var(--white);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.main-container header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+header img {
+  width: 24px;
+  height: 24px;
+}
+
+.faq-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.question-container {
+  width: 100%;
+  background-color: var(--white);
+  border: none;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question {
+  max-width: 225px;
+  font-size: 16px;
+  line-height: auto;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--purple-950);
+  text-align: left;
+}
+
+.question-container::after {
+  content: url("../assets/images/icon-plus.svg");
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+.accordion.active::after {
+  content: url("../assets/images/icon-minus.svg");
+  width: 30px;
+  height: 30px;
+}
+
+.accordion:hover .question {
+  color: var(--violet-600);
+}
+
+.answer-container {
+  margin-top: 24px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.answer {
+  color: var(--purple-600);
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid var(--purple-100);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
