@@ -105,7 +105,8 @@ header img {
   height: 30px;
 }
 
-.accordion:hover .question {
+.accordion:hover .question,
+.accordion:focus .question {
   color: var(--violet-600);
 }
 
@@ -137,4 +138,42 @@ hr {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: url("../assets/images/background-pattern-desktop.svg") no-repeat
+      top;
+    padding: 167px 0;
+  }
+
+  .main-container {
+    max-width: 600px;
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 56px;
+    line-height: 66px;
+  }
+
+  header img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .question-container {
+    width: 520px;
+  }
+
+  .question {
+    max-width: 450px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .answer {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
