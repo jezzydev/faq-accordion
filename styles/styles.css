@@ -17,16 +17,16 @@ html {
   --purple-600: hsl(292, 16%, 49%);
   --purple-950: hsl(292, 42%, 14%);
   --violet-600: hsl(281, 83%, 54%);
+  --blue: hsl(228, 45%, 44%);
 }
 
 p {
-  font-size: 16px;
+  font-size: 1em;
 }
 
 body {
   position: relative;
-  background: url("../assets/images/background-pattern-mobile.svg") no-repeat
-      top,
+  background: url("../assets/images/background-pattern-mobile.svg") repeat-x top,
     var(--purple-100);
   padding: 130px 0;
 }
@@ -39,7 +39,6 @@ main {
 h1 {
   font-size: 32px;
   font-weight: 700;
-  line-height: auto;
   letter-spacing: 0;
 }
 
@@ -85,7 +84,6 @@ header img {
 .question {
   max-width: 225px;
   font-size: 16px;
-  line-height: auto;
   font-weight: 600;
   letter-spacing: 0;
   color: var(--purple-950);
@@ -111,7 +109,7 @@ header img {
 }
 
 .answer-container {
-  margin-top: 24px;
+  margin-block-start: 24px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
@@ -137,12 +135,12 @@ hr {
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--blue);
 }
 
 @media screen and (min-width: 768px) {
   body {
-    background: url("../assets/images/background-pattern-desktop.svg") no-repeat
+    background: url("../assets/images/background-pattern-desktop.svg") repeat-x
       top;
     padding: 167px 0;
   }
